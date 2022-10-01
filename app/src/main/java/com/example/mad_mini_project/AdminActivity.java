@@ -20,22 +20,19 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class AdminActivity extends AppCompatActivity {
-
+    //Defining Variable
     EditText lname, lpws;
     Button lbtn;
     ProgressDialog progressDialog;
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin);
+        //Initializing Variable
         lname = findViewById(R.id.AdminUsername);
-
         lpws=findViewById(R.id.AdminPassword);
-
         lbtn = findViewById(R.id.btnAdminLogin);
+        //code for Auto login
         final SharedPreferences sharedPreferences=getSharedPreferences("Data", Context.MODE_PRIVATE);//memory type to store data
         progressDialog = new ProgressDialog(this);
         final  String type=sharedPreferences.getString("name","");
@@ -48,18 +45,19 @@ public class AdminActivity extends AppCompatActivity {
             Intent i=new Intent(AdminActivity.this,AdminAllActivity.class);
             startActivity(i);
         }
-
+        //onclick activity
         lbtn.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View view) {
+                //code for auto login
                 SharedPreferences.Editor editor=sharedPreferences.edit();//store the value
                 editor.putString("name",lname.getText().toString());
                 editor.putString("pws",lpws.getText().toString());
                 editor.commit();//store in memory
-
+                //retieving user entered data
                 String un=lname.getText().toString();
                 String pa=lpws.getText().toString();
+                //authentication for admin and redirecting to AdminAllActivity page
                 if(!un.equals("admin") ) {
                     Toast.makeText(AdminActivity.this,"Wrong Username!",Toast.LENGTH_LONG).show();
                     return;

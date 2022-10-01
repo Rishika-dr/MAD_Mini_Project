@@ -52,9 +52,6 @@ public class FirebaseService extends FirebaseMessagingService {
         channel.setDescription("My description");
         channel.enableLights(true);
         channel.setLightColor(Color.WHITE);
-
         manager.createNotificationChannel(channel);
     }
-
-
 }
