@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MAD_Mini_Project</string>
+    <string name="app_name">Bus Info System</string>
     <string name="title_activity_student_login">StudentLoginActivity</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>

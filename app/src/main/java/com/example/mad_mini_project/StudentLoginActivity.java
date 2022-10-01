@@ -22,6 +22,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class StudentLoginActivity extends AppCompatActivity {
+    //defining variable
     TextView CreateNewAccount;
 
     EditText StudentEmail,StudentPassword;
@@ -29,28 +30,30 @@ public class StudentLoginActivity extends AppCompatActivity {
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
     ProgressDialog progressDialog;
 
-    FirebaseAuth fAuth;
-    FirebaseUser fUser;
+    FirebaseAuth fAuth;//firebase authontication
+    FirebaseUser fUser;//firebase user
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_login);
         CreateNewAccount=findViewById(R.id.CreateNewAccount);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
+//initailizing variable
         StudentEmail=findViewById(R.id.StudentEmail);
         StudentPassword=findViewById(R.id.StudentPassword);
         btnStudentLogin=findViewById(R.id.btnStudentLogin);
-
+//code for auto login
         final SharedPreferences sharedPreferences=getSharedPreferences("student", Context.MODE_PRIVATE);//memory type to store data
         progressDialog = new ProgressDialog(this);
         final  String type=sharedPreferences.getString("name","");
         if(type.isEmpty())
         {
+            //toast message : please login
             Toast.makeText(getApplicationContext(),"Please Login",Toast.LENGTH_SHORT).show();
         }
         else
         {
+            //connection to next page i.e student home activity page
             Intent i=new Intent(StudentLoginActivity.this,StudentHomeActivity.class);
             startActivity(i);
         }
@@ -62,6 +65,7 @@ public class StudentLoginActivity extends AppCompatActivity {
         CreateNewAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //connection to next page i.e student register page
                 startActivity(new Intent(StudentLoginActivity.this,StudentRegisterActivity.class));
             }
         });
@@ -85,7 +89,7 @@ public class StudentLoginActivity extends AppCompatActivity {
         String std_password=StudentPassword.getText().toString();
 
 
-
+//autontication to student login
         if(!std_email.matches(emailPattern))
         {
             StudentEmail.setError("Enter Correct Email");
@@ -96,6 +100,7 @@ public class StudentLoginActivity extends AppCompatActivity {
         }
         else
         {
+            //progress dialog is used to interact with the app
             progressDialog.setMessage("Please wait while Login...");
             progressDialog.setTitle("Login");
             progressDialog.setCanceledOnTouchOutside(false);
@@ -121,6 +126,7 @@ public class StudentLoginActivity extends AppCompatActivity {
         }
     }
     private void sendUserToNextActivity() {
+        //connection to next page i.e student home activity page
         Intent intent=new Intent(StudentLoginActivity.this,StudentHomeActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);

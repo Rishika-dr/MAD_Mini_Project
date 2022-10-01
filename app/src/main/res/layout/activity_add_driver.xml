@@ -195,8 +195,6 @@ tools:context=".AddDriverActivity"
                 android:id="@+id/textView8"
                 android:layout_width="267dp"
                 android:layout_height="18dp"
-
-
                 android:layout_marginTop="4dp"
                 android:text="Accredited by NAAC with A+ Grade."
                 android:textAlignment="center"

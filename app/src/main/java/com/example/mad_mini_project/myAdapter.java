@@ -9,11 +9,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.ArrayList;
 
 public class myAdapter  extends RecyclerView.Adapter<myAdapter.myViewHolder>  {
     Context context;
     ArrayList<Bus> list;
+
 
     public myAdapter(Context context, ArrayList<Bus> list) {
         this.context = context;
@@ -34,6 +38,7 @@ public class myAdapter  extends RecyclerView.Adapter<myAdapter.myViewHolder>  {
         holder.dri.setText(buses.getTextdriver());
         holder.route.setText(buses.getTextroute());
         holder.phone.setText(buses.getTextphone());
+
     }
 
     @Override
@@ -50,6 +55,7 @@ public class myAdapter  extends RecyclerView.Adapter<myAdapter.myViewHolder>  {
             dri=itemView.findViewById(R.id.tdri);
             route=itemView.findViewById(R.id.troute);
             phone=itemView.findViewById(R.id.tphone);
+
         }
     }
 }

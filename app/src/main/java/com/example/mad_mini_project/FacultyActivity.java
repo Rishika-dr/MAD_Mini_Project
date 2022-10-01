@@ -20,6 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class FacultyActivity extends AppCompatActivity {
+    //defining variable
     EditText facultyname;
     EditText facultyid;
     Button btn;
@@ -31,6 +32,7 @@ public class FacultyActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_faculty);
+        //intailizing variable
         facultyname = (EditText) findViewById(R.id.FacName);
         facultyid = (EditText) findViewById(R.id.FacID);
         btn = (Button) findViewById(R.id.Faculty);
@@ -39,15 +41,17 @@ public class FacultyActivity extends AppCompatActivity {
         final  String type=sharedPreferences.getString("name","");
         if(type.isEmpty())
         {
+            //toast message
             Toast.makeText(getApplicationContext(),"Please Login",Toast.LENGTH_SHORT).show();
         }
         else
         {
+            //toast message
             Intent i=new Intent(FacultyActivity.this,FacultyHomeActivity.class);
             startActivity(i);
         }
 
-       faculty = FirebaseDatabase.getInstance().getReference().child("Faculty");
+        faculty = FirebaseDatabase.getInstance().getReference().child("Faculty");
         add = findViewById(R.id.Faculty);
         btn.setOnClickListener(new View.OnClickListener() {
 
@@ -57,24 +61,24 @@ public class FacultyActivity extends AppCompatActivity {
                 faculty.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-                       for(DataSnapshot snapshot1 : snapshot.getChildren()){
-                           String id=snapshot1.child("facultyID").getValue().toString();
-                           if(id.contentEquals(facultyid.getText().toString()))
-                           {
-                               Intent intent=new Intent(FacultyActivity.this,FacultyHomeActivity.class);
-                               intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
-                               startActivity(intent);
-                               SharedPreferences.Editor editor=sharedPreferences.edit();//store the value
-                               editor.putString("name",facultyname.getText().toString());
-                               editor.putString("pws",facultyid.getText().toString());
-                               editor.commit();//store in memory
-                               break;
-                           }
-                          else
-                           {
-                               Toast.makeText(FacultyActivity.this, "Not a Mite Faculty", Toast.LENGTH_SHORT).show();
-                           }
-                       }
+                        for(DataSnapshot snapshot1 : snapshot.getChildren()){
+                            String id=snapshot1.child("facultyID").getValue().toString();
+                            if(id.contentEquals(facultyid.getText().toString()))
+                            {
+                                Intent intent=new Intent(FacultyActivity.this,FacultyHomeActivity.class);
+                                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+                                startActivity(intent);
+                                SharedPreferences.Editor editor=sharedPreferences.edit();//store the value
+                                editor.putString("name",facultyname.getText().toString());
+                                editor.putString("pws",facultyid.getText().toString());
+                                editor.commit();//store in memory
+                                break;
+                            }
+                            else
+                            {
+                                Toast.makeText(FacultyActivity.this, "Not a Mite Faculty", Toast.LENGTH_SHORT).show();
+                            }
+                        }
                     }
 
                     @Override

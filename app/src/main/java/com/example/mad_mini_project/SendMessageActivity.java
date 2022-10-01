@@ -25,6 +25,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class SendMessageActivity extends AppCompatActivity {
+    //Defining Variable
     EditText message;
     String title;
     String text;
@@ -35,45 +36,44 @@ public class SendMessageActivity extends AppCompatActivity {
     SimpleDateFormat simpleTimeFormat;
     String Date;
     String Time;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_send_message);
+        //Initializing variable
         message = (EditText) findViewById(R.id.message);
+        //retriving current date and time
         calendar=Calendar.getInstance();
         simpleDateFormat=new SimpleDateFormat("dd-MM-yyyy");
         simpleTimeFormat=new SimpleDateFormat("hh:mm a");
         Date=simpleDateFormat.format(calendar.getTime());
         Time=simpleTimeFormat.format(calendar.getTime());
-
+        //connecting firebase
         send_message = FirebaseDatabase.getInstance().getReference().child("message");
         send = (Button) findViewById(R.id.btnMesaage);
-
         FirebaseMessaging.getInstance().subscribeToTopic(TOPIC);
         send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                //calling insertbusdetaildata class
                 insertbusdetaildata();
             }
 
             private void insertbusdetaildata() {
-
+                //retrive message from admin and some defined messages
                 String msg;
                 msg = message.getText().toString();
                 title="New Notification Arrived";
                 text="Check the Latest Message";
-
+                //Creating PushNotification object and passing NotificationData object as parameter where we will get title and text of notification
                 if ( !msg.isEmpty()) {
                     PushNotification notification = new PushNotification(new NotificationData(title,text), TOPIC);
                     sendNotification(notification);
                 }
+                ////creating Message object with parameterized constructors
                 Message m = new Message(Date,Time,msg);
+                //toast message
                 send_message.push().setValue(m);
-
-
-
             }
         });
     }

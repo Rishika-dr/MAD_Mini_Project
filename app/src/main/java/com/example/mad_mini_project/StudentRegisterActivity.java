@@ -30,6 +30,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class StudentRegisterActivity extends AppCompatActivity {
+    //defining varaible
     TextView AlreadyHaveAccount;
     EditText StudentName,USN,StudentEmail,StudentPhone,StudentPassword;
     Button btnStudentRegister;
@@ -53,7 +54,7 @@ public class StudentRegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_student_register);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         AlreadyHaveAccount=findViewById(R.id.AlreadyHaveAccount);
-
+        //initailizing varaible
         StudentName=findViewById(R.id.StudentName);
         USN=findViewById(R.id.USN);
         StudentEmail=findViewById(R.id.StudentEmail);
@@ -64,8 +65,6 @@ public class StudentRegisterActivity extends AppCompatActivity {
         fAuth=FirebaseAuth.getInstance();
         fUser=fAuth.getCurrentUser();
 //        fStore=FirebaseFirestore.getInstance();
-
-
         AlreadyHaveAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -87,11 +86,12 @@ public class StudentRegisterActivity extends AppCompatActivity {
         String std_email=StudentEmail.getText().toString();
         String std_phone=StudentPhone.getText().toString();
         String std_password=StudentPassword.getText().toString();
-
+        //to check whether Email validation is correct or not and
         if(!std_email.matches(emailPattern))
         {
             StudentEmail.setError("Enter Correct Email");
         }
+        // to check USN pattern matches
         else if(!std_usn.matches(pattern))
         {
             if(!std_usn.matches(pattern1))
@@ -105,16 +105,19 @@ public class StudentRegisterActivity extends AppCompatActivity {
                 }
             }
         }
+        //to check password is strong
         else if (std_password.isEmpty() || std_password.length()<6)
         {
             StudentPassword.setError("Password is not strong");
         }
+        //to check length of phone number is equal to  10
         else if (std_phone.length()<10)
         {
             StudentPhone.setError("Enter Correct Phone Number");
         }
         else
         {
+            //progress dialog message
             progressDialog.setMessage("Please wait while Registration...");
             progressDialog.setTitle("Registration");
             progressDialog.setCanceledOnTouchOutside(false);
@@ -128,26 +131,7 @@ public class StudentRegisterActivity extends AppCompatActivity {
                         progressDialog.dismiss();
                         sendUserToNextActivity();
                         Toast.makeText(StudentRegisterActivity.this,"Registration Successful",Toast.LENGTH_SHORT).show();
-//                        userID = fAuth.getCurrentUser().getUid();
-//                        DocumentReference documentReference = fStore.collection("users").document(userID);
-//                        Map<String,Object> user = new HashMap<>();
-//                        user.put("std_name",std_name);
-//                        user.put("std_email",std_email);
-//                        user.put("std_phone",std_phone);
-//                        user.put("std_usn",std_usn);
-//                        user.put("std_phone",std_phone);
-//                        user.put("std_password",std_password);
-//                        documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
-//                            @Override
-//                            public void onSuccess(Void aVoid) {
-//                                Log.d("TAG", "onSuccess: Student Profile is created for "+ userID);
-//                            }
-//                        }).addOnFailureListener(new OnFailureListener() {
-//                            @Override
-//                            public void onFailure(@NonNull Exception e) {
-//                                Log.d("TAG", "onFailure: " + e.toString());
-//                            }
-//                        });
+
                     }
                     else
                     {
