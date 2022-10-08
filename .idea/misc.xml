@@ -33,14 +33,14 @@
         <entry key="..\:/Downloads/MAD_Mini_Project-master/app/src/main/res/layout/activity_driver_home.xml" value="0.2" />
         <entry key="..\:/Downloads/MAD_Mini_Project-master/app/src/main/res/layout/activity_faculty.xml" value="0.25" />
         <entry key="..\:/Downloads/MAD_Mini_Project-master/app/src/main/res/layout/activity_faculty_home.xml" value="0.17074275362318841" />
-        <entry key="..\:/Downloads/MAD_Mini_Project-master/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Downloads/MAD_Mini_Project-master/app/src/main/res/layout/activity_main.xml" value="0.16" />
         <entry key="..\:/Downloads/MAD_Mini_Project-master/app/src/main/res/layout/activity_maps_driver.xml" value="0.17074275362318841" />
         <entry key="..\:/Downloads/MAD_Mini_Project-master/app/src/main/res/layout/activity_message.xml" value="0.17074275362318841" />
         <entry key="..\:/Downloads/MAD_Mini_Project-master/app/src/main/res/layout/activity_second.xml" value="0.2" />
-        <entry key="..\:/Downloads/MAD_Mini_Project-master/app/src/main/res/layout/activity_send_message.xml" value="0.17074275362318841" />
+        <entry key="..\:/Downloads/MAD_Mini_Project-master/app/src/main/res/layout/activity_send_message.xml" value="0.21" />
         <entry key="..\:/Downloads/MAD_Mini_Project-master/app/src/main/res/layout/activity_student.xml" value="0.2" />
         <entry key="..\:/Downloads/MAD_Mini_Project-master/app/src/main/res/layout/activity_student_home.xml" value="0.17074275362318841" />
-        <entry key="..\:/Downloads/MAD_Mini_Project-master/app/src/main/res/layout/activity_student_login.xml" value="0.27241139680333565" />
+        <entry key="..\:/Downloads/MAD_Mini_Project-master/app/src/main/res/layout/activity_student_login.xml" value="0.2" />
         <entry key="..\:/Downloads/MAD_Mini_Project-master/app/src/main/res/layout/activity_student_register.xml" value="0.25" />
         <entry key="..\:/Downloads/MAD_Mini_Project-master/app/src/main/res/layout/activity_view_driver.xml" value="0.21" />
         <entry key="..\:/Downloads/MAD_Mini_Project-master/app/src/main/res/layout/activity_view_faculty.xml" value="0.17074275362318841" />
@@ -50,6 +50,7 @@
         <entry key="..\:/Downloads/MAD_Mini_Project-master/app/src/main/res/layout/admin_header_layout.xml" value="0.2" />
         <entry key="..\:/Downloads/MAD_Mini_Project-master/app/src/main/res/layout/custom_dialog.xml" value="0.19010416666666666" />
         <entry key="..\:/Downloads/MAD_Mini_Project-master/app/src/main/res/layout/edit.xml" value="0.203125" />
+        <entry key="..\:/Downloads/MAD_Mini_Project-master/app/src/main/res/layout/fragment_admin.xml" value="0.20416666666666666" />
         <entry key="..\:/Downloads/MAD_Mini_Project-master/app/src/main/res/layout/list.xml" value="0.17074275362318841" />
         <entry key="..\:/Downloads/MAD_Mini_Project-master/app/src/main/res/layout/list2.xml" value="0.17074275362318841" />
         <entry key="..\:/Downloads/MAD_Mini_Project-master/app/src/main/res/layout/list3.xml" value="0.18" />

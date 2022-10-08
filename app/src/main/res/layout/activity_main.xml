@@ -27,21 +27,6 @@
         app:srcCompat="@drawable/bus111" />
 
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:fontFamily="@font/amarante"
-        android:text="Bus Information System"
-        android:textColor="#171C2C"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.659"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
     <Button
 
         android:id="@+id/student"
@@ -79,11 +64,50 @@
         app:layout_constraintTop_toBottomOf="@+id/admin"
         app:layout_constraintVertical_bias="0.161" />
 
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/textView7"-->
+    <!--        android:layout_width="265dp"-->
+    <!--        android:layout_height="23dp"-->
+    <!--        android:layout_marginStart="22dp"-->
+    <!--        android:layout_marginEnd="30dp"-->
+    <!--        android:text="Accredited by NAAC with A+ Grade."-->
+    <!--        android:textAlignment="center"-->
+    <!--        android:textSize="12sp"-->
+    <!--        app:layout_constraintEnd_toStartOf="@+id/imageView7"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/imageView"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/textView6"-->
+    <!--        tools:ignore="MissingConstraints" />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/textView8"-->
+    <!--        android:layout_width="345dp"-->
+    <!--        android:layout_height="30dp"-->
+    <!--        android:layout_marginStart="66dp"-->
+    <!--        android:text="Department of Computer Science &amp; Engineering"-->
+    <!--        android:textSize="16sp"-->
+    <!--        android:textStyle="bold"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/imageView7" />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/textView9"-->
+
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="70dp"-->
+    <!--        android:layout_marginTop="18dp"-->
+    <!--        android:text="(Accredited by NBA)"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/imageView7"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/textView7" />-->
+
     <Button
         android:id="@+id/admin"
         android:layout_width="150dp"
         android:layout_height="95dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="4dp"
         android:backgroundTint="#AD163CC3"
         android:drawableLeft="@drawable/student"
         android:fontFamily="@font/bubblegum_sans"
@@ -93,104 +117,27 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="75dp"
-        android:layout_height="71dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="402dp"
+        android:layout_height="126dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/log" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="411dp"
+        android:layout_height="104dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.034"
-        app:srcCompat="@drawable/logo" />
-
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="284dp"
-        android:layout_height="26dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:fontFamily="times new roman"
-        android:text="Mangalore Institute of Technology"
-        android:textColor="#004798"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView7" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="146dp"
-        android:layout_height="24dp"
-        android:fontFamily="times new roman"
-        android:text="&amp; Engineering"
-        android:textColor="#004798"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.436"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="265dp"
-        android:layout_height="23dp"
-
-
-        android:layout_marginTop="4dp"
-        android:text="Accredited by NAAC with A+ Grade."
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.253"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-
-    <!--    <TextView-->
-<!--        android:id="@+id/textView7"-->
-<!--        android:layout_width="265dp"-->
-<!--        android:layout_height="23dp"-->
-<!--        android:layout_marginStart="22dp"-->
-<!--        android:layout_marginEnd="30dp"-->
-<!--        android:text="Accredited by NAAC with A+ Grade."-->
-<!--        android:textAlignment="center"-->
-<!--        android:textSize="12sp"-->
-<!--        app:layout_constraintEnd_toStartOf="@+id/imageView7"-->
-<!--        app:layout_constraintStart_toEndOf="@+id/imageView"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/textView6"-->
-<!--        tools:ignore="MissingConstraints" />-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/textView8"-->
-<!--        android:layout_width="345dp"-->
-<!--        android:layout_height="30dp"-->
-<!--        android:layout_marginStart="66dp"-->
-<!--        android:text="Department of Computer Science &amp; Engineering"-->
-<!--        android:textSize="16sp"-->
-<!--        android:textStyle="bold"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/imageView7" />-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/textView9"-->
-
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="70dp"-->
-<!--        android:layout_marginTop="18dp"-->
-<!--        android:text="(Accredited by NBA)"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toEndOf="@+id/imageView7"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/textView7" />-->
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:srcCompat="@drawable/mi" />
 
     <ImageView
         android:id="@+id/imageView6"
@@ -214,38 +161,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView7" />
-
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="81dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="36dp"
-        android:fontFamily="times new roman"
-        android:text="MITE"
-        android:textColor="#171C2C"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.53"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="348dp"
-        android:layout_height="26dp"
-
-
-        android:layout_marginTop="4dp"
-        android:text="Department of Computer Science &amp; Engineering"
-        android:textAlignment="center"
-        android:textColor="@android:color/holo_red_dark"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.742"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
